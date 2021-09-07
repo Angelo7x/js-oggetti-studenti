@@ -33,13 +33,19 @@ var studenti = [
     }
 ];
 
-// Ciclo per stampare gli oggetti dentro l'array
-for ( var i = 0 ; i < studenti.length ; i++) {
-    console.log(studenti[i]);
-}
+
 
 // Crere i 3 prompt chiedendo all'utente di inserire nome, cognome e eta del nuovo studente e pusharlo dentro l'array
 
-studenti.push((prompt("Inserisci il nome dello studente")));
-studenti.push((prompt("Inserisci il cognome dello studente")));
-studenti.push((parseInt(prompt("Inserisci l'età dello studente"))));
+var nuovoStudente = {
+    nome : prompt("Inserisci il tuo nome"),
+    cognome : prompt("Inserisci il tuo cognome"),
+    eta : parseInt(prompt("Inserisci la tua età"))
+};
+
+studenti.push(nuovoStudente)
+
+// Ciclo per stampare gli oggetti dentro l'array
+for ( var i = 0 ; i < studenti.length ; i++) {
+    console.log(studenti[i]);
+};
